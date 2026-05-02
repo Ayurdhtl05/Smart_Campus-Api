@@ -223,9 +223,9 @@ According to the strict REST theory, DELETE is idempotent: performing it multipl
 
 For example, in this implementation it first removes the room from the DataStore by issuing a DELETE request and returns HTTP 204 No Content. Later, any DELETE request with the same room ID does not find anything and raises a NotFoundException HTTP 404 Not Found error.
 
-Idempotency is a server state, not an HTTP response code. The state of the server is identical after both the first and any subsequent DELETE calls: there in no room. The 404 on the second call is response difference that changes nothing in the state. This interpretation is accepted by many authoritative REST resources including RFC 7231. The resource is notified, but it is already known to be missing and nothing unintended happens.  Pa
+Idempotency is a server state, not an HTTP response code. The state of the server is identical after both the first and any subsequent DELETE calls: there in no room. The 404 on the second call is response difference that changes nothing in the state. This interpretation is accepted by many authoritative REST resources including RFC 7231. The resource is notified, but it is already known to be missing and nothing unintended happens.  
 
-rt 3 — Se
+
 
 
 
